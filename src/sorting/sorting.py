@@ -1,7 +1,8 @@
 # TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge(arrA, arrB):
     elements = len(arrA) + len(arrB)
-    merged_arr = [0] * elements
+    # merged_arr = [0] * elements #creates an element that is whatever elements long and all are 0's
+    merged_arr = []
     # Your code here
 
     while len(arrA) > 0 and len(arrB) > 0:  # if both arrays are > 0 basecase
@@ -13,7 +14,7 @@ def merge(arrA, arrB):
             merged_arr.append(arrB.pop(0))
     while len(arrA) > 0:
         # append popped 0 index of array A to merged
-        merged_arr.append(arrB.pop(0))
+        merged_arr.append(arrA.pop(0))
     while len(arrB) > 0:
         # append popped 0 index of array B to merged
         merged_arr.append(arrB.pop(0))
